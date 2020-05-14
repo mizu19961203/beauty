@@ -1,0 +1,2 @@
+class Seet < ApplicationRecord
+end

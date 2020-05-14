@@ -10,6 +10,9 @@ class User < ApplicationRecord
          :omniauthable,
          omniauth_providers:%i(google)
 
+  has_many :shops, dependent: :destroy
+  has_many :stylists, dependent: :destroy
+
   protected
     def self.find_for_google(auth)
       user = User.find_by(email: auth.info.email)

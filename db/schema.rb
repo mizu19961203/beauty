@@ -10,7 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_13_131025) do
+ActiveRecord::Schema.define(version: 2020_05_14_081909) do
+
+  create_table "bases", force: :cascade do |t|
+    t.string "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hairstyles", force: :cascade do |t|
+    t.string "menu"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recommemds", force: :cascade do |t|
+    t.string "recommend"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "seets", force: :cascade do |t|
+    t.string "seet"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.text "image_id"
+    t.integer "seet_id"
+    t.integer "recommend_id"
+    t.text "description"
+    t.text "address"
+    t.float "latitude"
+    t.float "longitude"
+  end
+
+  create_table "stylists", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.text "image_id"
+    t.integer "base_id"
+    t.integer "hairstyle_id"
+    t.text "description"
+    t.date "date_start"
+    t.date "date_fin"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

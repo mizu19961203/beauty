@@ -46,9 +46,9 @@ before_action :authenticate_user!
                                    :latitude,
                                    :longitude,
                                    :user_id,
-                                   :image_id,
                                    :seet_id,
-                                   :recommend_id
+                                   :recommend_id,
+                                   images: []
                                 )
     end
 

@@ -8,7 +8,7 @@
   <div><%= f.text_field :description %></div>
 
   <div><%= f.label :活動拠点 %></div>
-  <div><%= f.collection_select :base_id, Base.all,:id,:active %></div>
+  <div></div>
 
   <div><%= f.label :得意なヘアスタイル %></div>
   <div><%= f.collection_select :hairstyle_id, Hairstyle.all,:id,:menu %></div>
@@ -20,7 +20,7 @@
   <div><%= f.date_select :date_fin %></div>
 
   <div><%= f.label :プロフィール画像 %></div>
-  <div><%=  %></div>
+  <div><%= f.file_field :image, multiple: true %></div>
 
   <div><%= f.submit %></div>
 <% end %>

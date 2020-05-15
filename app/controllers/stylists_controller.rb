@@ -47,7 +47,8 @@ before_action :authenticate_user!
 	                                   :user_id,
 	                                   :base_id,
 	                                   :hairstyle_id,
-	                                   :recommend_id
+	                                   :recommend_id,
+                                     images: []
                                   	)
     end
 

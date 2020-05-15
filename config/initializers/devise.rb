@@ -35,7 +35,8 @@ Devise.setup do |config|
                     ENV['GOOGLE_APP_ID'],
                     ENV['GOOGLE_APP_SECRET'],
                     name: :google,
-                    scope: %w(email)
+                    scope: %w(email),
+                    skip_jwt: true
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is

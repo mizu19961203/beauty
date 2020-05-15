@@ -1,4 +1,6 @@
 class StylistsController < ApplicationController
+before_action :authenticate_user!
+
   def new
     @stylist = Stylist.new
   end
@@ -48,6 +50,5 @@ class StylistsController < ApplicationController
 	                                   :recommend_id
                                   	)
     end
-  end
 
 end

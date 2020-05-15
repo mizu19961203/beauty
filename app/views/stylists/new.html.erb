@@ -1,2 +1,29 @@
-<h1>Stylists#new</h1>
-<p>Find me in app/views/stylists/new.html.erb</p>
+<h1>新規登録</h1>
+<%= form_with model: @stylist, local: true do |f| %>
+
+  <div><%= f.label :名称 %></div>
+  <div><%= f.text_field :name %></div>
+
+  <div><%= f.label :自己紹介 %></div>
+  <div><%= f.text_field :description %></div>
+
+  <div><%= f.label :活動拠点 %></div>
+  <div><%= f.collection_select :base_id, Base.all,:id,:active %></div>
+
+  <div><%= f.label :得意なヘアスタイル %></div>
+  <div><%= f.collection_select :hairstyle_id, Hairstyle.all,:id,:menu %></div>
+
+  <div><%= f.label :開始日 %></div>
+  <div><%= f.date_select :date_start %></div>
+
+  <div><%= f.label :終了日 %></div>
+  <div><%= f.date_select :date_fin %></div>
+
+  <div><%= f.label :プロフィール画像 %></div>
+  <div><%=  %></div>
+
+  <div><%= f.submit %></div>
+<% end %>
+<%= link_to '戻る', root_path %>
+
+<%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>

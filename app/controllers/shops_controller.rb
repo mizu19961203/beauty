@@ -1,4 +1,5 @@
 class ShopsController < ApplicationController
+before_action :authenticate_user!
 
   def new
     @shop = Shop.new
@@ -50,6 +51,5 @@ class ShopsController < ApplicationController
                                    :recommend_id
                                 )
     end
-  end
 
 end

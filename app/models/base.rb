@@ -1,3 +1,3 @@
-class Basis < ApplicationRecord
+class Base < ApplicationRecord
 	has_many :stylists
 end

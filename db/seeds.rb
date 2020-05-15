@@ -1,7 +1,31 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Seet.create({seet: "1"})
+Seet.create({seet: "2"})
+Seet.create({seet: "3"})
+Seet.create({seet: "4"})
+Seet.create({seet: "5"})
+Seet.create({seet: "6"})
+Seet.create({seet: "7"})
+Seet.create({seet: "8"})
+Seet.create({seet: "9"})
+Seet.create({seet: "10"})
+Seet.create({seet: "11"})
+
+Recommend.create({text: "パーマかけたい"})
+Recommend.create({text: "ショートにしたい"})
+Recommend.create({text: "前髪切りたい"})
+Recommend.create({text: "月に1回のメンテナンス"})
+Recommend.create({text: "毛先を整えたい"})
+
+Base.create({base: "都内23区内"})
+Base.create({base: "都内23区外"})
+Base.create({base: "渋谷区"})
+Base.create({base: "新宿区"})
+Base.create({base: "品川区"})
+Base.create({base: "港区"})
+Base.create({base: "吉祥寺"})
+
+Hairstyle.create({menu: "ショート"})
+Hairstyle.create({menu: "ロング"})
+Hairstyle.create({menu: "冠婚葬祭"})
+Hairstyle.create({menu: "メンズカット"})
+

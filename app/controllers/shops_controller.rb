@@ -8,7 +8,7 @@ before_action :authenticate_user!
   def create
     @shop = Shop.create(shop_params)
     if @shop.save
-      redirect_to shops_path
+      redirect_to shops_path, notice: '作成しました'
     else
       render 'new'
     end

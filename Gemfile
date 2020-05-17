@@ -74,7 +74,9 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'aws-sdk-s3', require: false
-
+gem "geocoder"
+gem "gmaps4rails"
+gem 'underscore-rails'
 gem 'pry-byebug'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'

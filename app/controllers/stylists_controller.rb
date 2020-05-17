@@ -41,14 +41,14 @@ before_action :authenticate_user!
   private
     def stylist_params
       params.require(:stylist).permit( :name,
-	                                   :description,
-	                                   :date_start,
-	                                   :date_fin,
-	                                   :user_id,
-	                                   :base_id,
-	                                   :hairstyle_id,
-	                                   :recommend_id,
-                                     images: []
+  	                                   :description,
+  	                                   :date_start,
+  	                                   :date_fin,
+  	                                   :user_id,
+  	                                   :base_id,
+  	                                   :hairstyle_id,
+  	                                   :recommend_id,
+                                       images: []
                                   	)
     end
 

@@ -1,0 +1,28 @@
+
+<table>
+  <thead>
+    <tr>
+      <td></td>
+      <td>名称</td>
+      <td>内容</td>
+      <td>店舗写真</td>
+      <td>場所・住所</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shops.each do |shop| %>
+      <tr>
+        <td><%= shop.id %></td>
+        <td><%= shop.name %></td>
+        <td><%= shop.description %></td>
+        <td><%= image_tag(shop) %></td>
+        <td><%= shop.address %></td>
+        <td><%= link_to '詳細', shop_path(shop) %></td>
+        <td><%= link_to '編集', edit_shop_path(shop) %></td>
+        <td><%= link_to '削除', shop_path(shop), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

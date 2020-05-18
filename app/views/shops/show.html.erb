@@ -13,7 +13,9 @@
 </div>
 
 <div>
-	住所 : <%= @shop.address %>
+  <% @shop.images.each do |image| %>
+	 住所 : <%= image_tag(image) %>
+  <% end %>
 </div>
 
 

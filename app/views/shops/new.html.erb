@@ -17,7 +17,7 @@
   <div><%= f.text_field :address, placeholder: "住所" %></div>
 
   <div><%= f.label :店舗写真 %></div>
-  <div><%= f.file_field :images, multiple: true %></div>
+  <div><%= f.file_field :images, accept: "image/png, image/jpeg, image/gif" , multiple: true %></div>
 
   <div><%= f.submit %></div>
 <% end %>

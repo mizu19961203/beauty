@@ -73,7 +73,7 @@ gem 'devise-i18n-views'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-# gem 'aws-sdk-s3', require: false
+gem 'aws-sdk-s3', require: false
 gem 'mini_magick'
 gem "geocoder"
 gem "gmaps4rails"

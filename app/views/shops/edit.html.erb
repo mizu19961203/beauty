@@ -1,4 +1,4 @@
-<h1>新規登録</h1>
+<h1>店舗編集画面</h1>
 <%= form_with model: @shop, local: true do |f| %>
 
   <div><%= f.label :名称 %></div>
@@ -17,10 +17,10 @@
   <div><%= f.text_field :address, placeholder: "住所" %></div>
 
   <div><%= f.label :店舗写真 %></div>
-  <div><%= f.file_field :images, multiple: true %></div>
+  <div><%= f.file_field :image, multiple: true %></div>
 
   <div><%= f.submit %></div>
 <% end %>
 
-<%= link_to '戻る', root_path %>
+<%= link_to '戻る', shops_path %>
 <%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>

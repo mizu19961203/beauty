@@ -20,6 +20,7 @@ before_action :authenticate_user!
 
   def show
     @stylist = Stylist.find(params[:id])
+    @stylists = Stylist.all
   end
 
   def edit

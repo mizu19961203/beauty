@@ -9,17 +9,15 @@
 </div>
 
 <div>
-	店舗写真 : <%= image_tag(@shop) %>
-</div>
-
-<div>
+  店舗写真 :
   <% @shop.images.each do |image| %>
-	 住所 : <%= image_tag(image) %>
+	 <%= image_tag(@shop) %>
   <% end %>
 </div>
 
-
-<div id="map">
+<div>
+	 住所 : <%= @shop.address %>
+</div>
 
   <script type="text/javascript">
     handler = Gmaps.build('Google');
@@ -37,7 +35,7 @@
     });
   </script>
 
-</div>
+<div id="map"></div>
 
 <div>
 	<%= link_to '編集', edit_shop_path %>

@@ -30,6 +30,25 @@
                   <li><a href="#"><i class="fas fa-globe"></i></a></li>
                   <li><a href="#">ヘルプ</a></li>
                   <li><a href="#">使い方</a></li>
+                  <% if user_signed_in? %>
+                    <li>
+                      <%=link_to " 店舗を登録 " ,shops_path %>
+                    </li>
+                    <li>
+                      <%=link_to " 美容師として登録 " ,stylists_path %>
+                    </li>
+                    <li>
+                      <%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>
+                    </li>
+                    <% else %>
+
+                    <li>
+                      <%= link_to ' ログイン ',new_user_session_path%>
+                    </li>
+                    <li>
+                      <%= link_to ' 新規登録  ',new_user_registration_path%>
+                    </li>
+                  <% end %>
                 </ul>
               </div>
             </div>
@@ -54,13 +73,9 @@
       </div>
     </header>
 
-
-    <body>
-      <div id="wrapper">
-            <%= yield %>
-      </div>
-    </body>
-
+    <div id="main">
+      <%= yield %>
+    </div>
 
     <footer id="footer">
       <div id="nav">

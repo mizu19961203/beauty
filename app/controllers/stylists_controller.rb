@@ -1,5 +1,5 @@
 class StylistsController < ApplicationController
-before_action :authenticate_user!
+before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
 
   def new
     @stylist = Stylist.new
@@ -15,7 +15,7 @@ before_action :authenticate_user!
   end
 
   def index
-    @stylists = Stylist.all
+    @stylists = Stylist.page(params[:page]).per(12)
   end
 
   def show
@@ -51,6 +51,13 @@ before_action :authenticate_user!
   	                                   :recommend_id,
                                        images: []
                                   	)
+    end
+
+    def ensure_correct_user
+      @stylist = Stylist.find(params[:id])
+      if current_user != @stylist.user
+        redirect_to stylists_path
+      end
     end
 
 end

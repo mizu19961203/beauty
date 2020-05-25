@@ -1,27 +1,78 @@
-<% if user_signed_in? %>
-	<li>
-		<%=link_to " 店舗 " ,shops_path %>
-	</li>
-	<li>
-		<%=link_to " 髪を切る " ,stylists_path %>
-	</li>
-	<li>
-		<%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>
-	</li>
-	<% else %>
-
-	<li>
-	  <%= link_to ' ログイン ',new_user_session_path%>
-	</li>
-	<li>
-	  <%= link_to ' 新規登録  ',new_user_registration_path%>
-	</li>
-<% end %>
-
-<a class="circle">
-  <span><%= link_to " 店舗を登録する " ,new_shop_path %></span>
-</a>
-<h3><%= link_to " 美容師として登録する " ,new_stylist_path %></h3>
+<div class="mv">
+    <div class="circle c-1">
+    	<h2 style="padding-top: 35px;">
+    		<%= link_to " 自由な美容師になりたい " ,new_stylist_path %>
+    	</h2>
+	</div>
+	<div class="circle c-2">
+		<h2 style="padding-top: 35px;">
+			<%= link_to " 髪型を変えたい " %>
+		</h2>
+	</div>
+	<div class="circle c-3">
+		<h2 style="padding-top: 35px;">
+			<%= link_to " 空いている席を貸したい " ,new_shop_path %>
+		</h2>
+	</div>
+</div>
+<div class="container">
+	<div class="row p-20">
+		<div style="font-weight: bold; font-size: 50px; margin: 0px auto;">
+			For B&C とは
+		</div>
+	</div>
+	<div class="row p-20 mb-20">
+		<div class="col-sm-offset-2" style="margin: 0px auto;">
+			<h2>#description#description#description#description</h2>
+			<h2>#description#description#description#description</h2>
+			<h2>#description#description#description#description</h2>
+			<h2>#description#description#description#description</h2>
+			<h2>#description#description#description#description</h2>
+		</div>
+	</div>
+	<div class="row p-20 mb-20">
+		<div class="col-sm-5">
+			<%= image_tag 'main1.jpg', style: "height: 400px; weight: 300px;" %>
+		</div>
+		<div class="col-sm-7">
+			<h1>全ての美容師に適正価格を</h1>
+			<h1>全ての美容師に適正価格を</h1>
+			<h1>全ての美容師に適正価格を</h1>
+			<h1>全ての美容師に適正価格を</h1>
+			<h1>全ての美容師に適正価格を</h1>
+			<h1>全ての美容師に適正価格を</h1>
+			<h1>全ての美容師に適正価格を</h1>
+		</div>
+	</div>
+	<div class="row p-20 mb-20">
+		<div class="col-sm-5">
+			<%= image_tag 'main2.jpg', style: "height: 400px; weight: 300px;" %>
+		</div>
+		<div class="col-sm-7">
+			<h1></h1>
+			<h1>理想の髪型を</h1>
+			<h1>感覚的に見つけることができる</h1>
+			<h1>理想の髪型を</h1>
+			<h1>感覚的に見つけることができる</h1>
+			<h1>理想の髪型を</h1>
+			<h1>感覚的に見つけることができる</h1>
+		</div>
+	</div>
+	<div class="row p-20 mb-20">
+		<div class="col-sm-5">
+			<%= image_tag 'main3.jpg', style: "height: 400px; weight: 300px;" %>
+		</div>
+		<div class="col-sm-7">
+			<h1>空いている席を有効活用</h1>
+			<h1>空いている席を有効活用</h1>
+			<h1>空いている席を有効活用</h1>
+			<h1>空いている席を有効活用</h1>
+			<h1>空いている席を有効活用</h1>
+			<h1>空いている席を有効活用</h1>
+			<h1>空いている席を有効活用</h1>
+		</div>
+	</div>
+</div>
 
 <p id="pageTop">
   <a href="#"><i class="fas fa-angle-double-up"></i></a>

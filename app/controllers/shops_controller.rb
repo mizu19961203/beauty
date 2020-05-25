@@ -1,5 +1,5 @@
 class ShopsController < ApplicationController
-before_action :authenticate_user!
+before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
 
   def new
     @shop = Shop.new
@@ -15,7 +15,7 @@ before_action :authenticate_user!
   end
 
   def index
-    @shops = Shop.all
+    @shops = Shop.page(params[:page]).per(12)
   end
 
   def show
@@ -50,6 +50,13 @@ before_action :authenticate_user!
                                    :recommend_id,
                                    images: []
                                 )
+    end
+
+    def ensure_correct_user
+      @shop = Shop.find(params[:id])
+      if current_user != @shop.user
+        redirect_to stylists_path
+      end
     end
 
 end

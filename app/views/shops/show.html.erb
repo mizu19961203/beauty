@@ -11,7 +11,7 @@
 <div>
   店舗写真 :
   <% @shop.images.each do |image| %>
-	 <%= image_tag(@shop) %>
+	 <%= image_tag(image,fallback: "no_image.png") %>
   <% end %>
 </div>
 
@@ -37,6 +37,7 @@
 
 <div id="map"></div>
 
+<% if @shop.user_id == current_user.id %>
 <div>
 	<%= link_to '編集', edit_shop_path %>
 </div>
@@ -44,7 +45,7 @@
 <div>
 	<%= link_to '削除', shop_path, method: :delete %>
 </div>
-
+<% end %>
 <div>
 	<%= link_to '戻る', shops_path %>
 </div>

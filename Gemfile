@@ -79,5 +79,5 @@ gem 'bullet'
 gem 'kaminari','~> 1.1.1'
 
 group :production do
-  gem 'mysql2', '~> 0.3.18'
+  gem 'mysql2', '~> 0.3.21'
 end

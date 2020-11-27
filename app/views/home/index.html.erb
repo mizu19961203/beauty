@@ -1,60 +1,98 @@
-<div>
-    	<h2><%= link_to " 自由な美容師になりたい " ,new_stylist_path %></h2>
-    	<h2><%= link_to " 髪型を変えたい " %></h2>
-    	<h2><%= link_to " 空いている席を貸したい " ,new_shop_path %></h2>
-</div>
-<div>
-	<div>For B&C とは</div>
-	<div>
-		<h2>#description#description#description#description</h2>
-		<h2>#description#description#description#description</h2>
-		<h2>#description#description#description#description</h2>
-		<h2>#description#description#description#description</h2>
-		<h2>#description#description#description#description</h2>
-	</div>
-	<div>
-		<div>
+<%= stylesheet_link_tag "home", :media => "all" %>
+
+
+
+
+<div class="top-wrapper">
+		<div class="top-menu">
+			<ul>
+    			<li><i class="fas fa-cut"></i><%= link_to "美容師さんはこちら" ,new_stylist_path %></a></li>
+    			<li><i class="fas fa-search"></i><%= link_to "美容師さんを探す" %></li>
+    			<li><i class="fas fa-chair"></i><%= link_to " 空いている席を貸す " ,new_shop_path %></li>
+    		</ul>
+    	</div>
+	<div class="container top-container">
+		<div class="top-message">
+    		<h1>美容師という職業をもっと自由に
+    		<br>専属フリーランス美容師とマッチしよう
+    		</h1>
+    		<p> 時間と場所に縛られない美容師という選択。
+    		<br>お席は店舗の空き席を活用。
+    		<br>美容師さん本人が広告塔へ。
+    		</p>
+    		<a href ="#" class="btn register-btn">事前登録をする</a>
+    	</div>
+    	
+		<div class="top-message-img">
 			<%= image_tag 'main1.jpg', style: "height: 400px; weight: 300px;" %>
 		</div>
-		<div>
-			<h1>全ての美容師に適正価格を</h1>
-			<h1>全ての美容師に適正価格を</h1>
-			<h1>全ての美容師に適正価格を</h1>
-			<h1>全ての美容師に適正価格を</h1>
-			<h1>全ての美容師に適正価格を</h1>
-			<h1>全ての美容師に適正価格を</h1>
-			<h1>全ての美容師に適正価格を</h1>
-		</div>
-	</div>
-	<div>
-		<div>
-			<%= image_tag 'main2.jpg', style: "height: 400px; weight: 300px;" %>
-		</div>
-		<div>
-			<h1>理想の髪型を</h1>
-			<h1>感覚的に見つけることができる</h1>
-			<h1>理想の髪型を</h1>
-			<h1>感覚的に見つけることができる</h1>
-			<h1>理想の髪型を</h1>
-			<h1>感覚的に見つけることができる</h1>
-			<h1>理想の髪型を</h1>
-		</div>
-	</div>
-	<div>
-		<div>
-			<%= image_tag 'main3.jpg', style: "height: 400px; weight: 300px;" %>
-		</div>
-		<div>
-			<h1>空いている席を有効活用</h1>
-			<h1>空いている席を有効活用</h1>
-			<h1>空いている席を有効活用</h1>
-			<h1>空いている席を有効活用</h1>
-			<h1>空いている席を有効活用</h1>
-			<h1>空いている席を有効活用</h1>
-			<h1>空いている席を有効活用</h1>
+    </div>
+</div>
+<div class="about-service-box-wrapper">
+	<div class="container">
+		<h3>Matchaとは</h3>
+		<div class="about-service-box">
+			<div class="about-service-box-item">
+				<div class="about-service-box-item-head">美容師さんに適正価格を</div>
+				<div><%= image_tag 'main1.jpg', style: "height: 300px; weight: 300px;" %></div>
+				<p>働く時間、働くエリアを自分で決められて、自由な働き方を実現しましょう。Matchaは美容師さんの施術に対して"利益率90%"を目指します。</p>
+			</div>
+			<div class="about-service-box-item">
+				<div class="about-service-box-item-head">理想の美容師さんを見つけられる</div>
+				<div><%= image_tag 'main1.jpg', style: "height: 300px; weight: 300px;" %></div>
+				<p>美容師さんの得意なスタイルや過去の写真が見れるから、理想の専属美容師さんに出会えます。</p>
+			</div>
+			<div class="about-service-box-item">
+				<div class="about-service-box-item-head">お店の空いている席を貸し出せる</div>
+				<div><%= image_tag 'main1.jpg', style: "height: 300px; weight: 300px;" %></div>
+				<p>空いている"席"を有効活用することで、お店の売り上げを増やすことができます。席を常に稼動させて席の空き時間を減らしましょう。</p>
+			</div>
 		</div>
 	</div>
 </div>
+<div class="contents-wrapper">
+	<div class="container">
+		<div class="contents-box">
+			<div class="contents-box-item">
+				<div>
+					<%= image_tag 'main1.jpg', style: "height: 400px; weight: 300px;" %>
+				</div>
+				<div class="contents-box-item-message">
+					<h3>美容師さんに適正価格を</h3>
+					<p>店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。</p>
+				</div>
+			</div>
+			<div class="contents-box-item">
+				<div>
+					<%= image_tag 'main1.jpg', style: "height: 400px; weight: 300px;" %>
+				</div>
+				<div class="contents-box-item-message">
+					<h3>美容師さんに適正価格を</h3>
+					<p>店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。</p>
+				</div>
+			</div>
+			<div class="contents-box-item">
+				<div>
+					<%= image_tag 'main1.jpg', style: "height: 400px; weight: 300px;" %>
+				</div>
+				<div class="contents-box-item-message">
+					<h3>美容師さんに適正価格を</h3>
+					<p>店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。</p>
+				</div>
+			</div>
+			<div class="contents-box-item">
+				<div>
+					<%= image_tag 'main1.jpg', style: "height: 400px; weight: 300px;" %>
+				</div>
+				<div class="contents-box-item-message">
+					<h3>美容師さんに適正価格を</h3>
+					<p>店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <p id="pageTop">
   <a href="#"><i class="fas fa-angle-double-up"></i></a>

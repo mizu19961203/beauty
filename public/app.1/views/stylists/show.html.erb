@@ -1,0 +1,27 @@
+
+
+
+<h3>名前</h3>
+<h3><%= @stylist.name %></h3>
+<h3>自己紹介</h3>
+<h3><%= @stylist.description %></h3>
+<h3>プロフィール写真</h3>
+<h3>
+    <% @stylist.images.each do |image| %>
+		<%= image_tag(image,fallback: "no_image.png") %>
+	<% end %>
+</h3>
+<h3>開始日</h3>
+<h3><%= @stylist.date_start %></h3>
+<h3>終了日</h3>
+<h3><%= @stylist.date_fin %></h3>
+<h3></h3>
+<h3></h3>
+
+<h3><%= link_to '編集', edit_stylist_path(@stylist) %></h3>
+<h3><%= link_to '削除', stylist_path(@stylist), method: :delete ,"data-confirm" => "本当に削除しますか？"%></h3>
+
+<h3><%= link_to '戻る', stylists_path %></h3>
+
+
+

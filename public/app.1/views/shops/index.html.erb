@@ -1,0 +1,32 @@
+
+<table>
+  <thead>
+    <tr>
+      <td></td>
+      <td>名称</td>
+      <td>内容</td>
+      <td>店舗写真</td>
+      <td>場所・住所</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shops.each do |shop| %>
+      <tr>
+        <td><%= shop.id %></td>
+        <td><%= shop.name %></td>
+        <td><%= shop.description %></td>
+        <td><%= image_tag(shop,fallback: "no_image.png") %></td>
+        <td><%= shop.address %></td>
+        <td><%= link_to '詳細', shop_path(shop) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1" style="text-align:center; padding:20px; font-size: 25px;">
+        <%= paginate @shops, class: "paginate" %>
+    </div>
+</div>
+

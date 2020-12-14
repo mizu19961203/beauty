@@ -17,19 +17,14 @@
 /log/*
 /tmp/*
 
-
-<<<<<<< HEAD
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
-
 
 # Ignore uploaded files in development.
 /storage/*
 
-
 /node_modules
 /yarn-error.log
-
 
 /public/assets
 .byebug_history

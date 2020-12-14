@@ -1,0 +1,32 @@
+
+<section class="section">
+    <div class="l-container">
+
+      <div class="sectionTitle row">
+        <h1 class="sectionTitle">美容師リスト</h1>
+      </div>
+
+      <div class="productList row">
+        <% @stylists.each do |stylist| %>
+        <div class="productList-stylist l-box">
+          <a class="productList-stylist-link" href="/stylists/<%= stylist.id %>">
+            <div class="productList-stylist-image">
+              <% stylist.images.each do |image| %>
+                <%= image_tag(image ,size: "240x240", fallback: "no_image.png",size: "240x240") %>
+              <% end %>
+            </div>
+            <h2 class="productList-stylist-name"><%= stylist.name %></h2>
+            <p class="productList-stylist-date-start"><%= stylist.date_start %></p>
+          </a>
+        </div>
+        <% end %>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-10 col-sm-offset-1" style="text-align:center; padding:20px; font-size: 25px;">
+              <%= paginate @stylists, class: "paginate" %>
+          </div>
+      </div>
+
+    </div>
+  </section>

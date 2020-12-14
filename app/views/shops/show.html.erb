@@ -1,0 +1,51 @@
+<h1>詳細</h1>
+
+<div>
+	名称 : <%= @shop.name %>
+</div>
+
+<div>
+	内容 : <%= @shop.description %>
+</div>
+
+<div>
+  店舗写真 :
+  <% @shop.images.each do |image| %>
+	 <%= image_tag(image,fallback: "no_image.png") %>
+  <% end %>
+</div>
+
+<div>
+	 住所 : <%= @shop.address %>
+</div>
+
+  <script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers([
+        {
+          "lat": <%= @shop.latitude %>,
+          "lng": <%= @shop.longitude %>,
+		  "infowindow": '<p><%= @shop.name %></p><p><%= @shop.address %></p><p><%= link_to "Googleマップで見る" ,"https://maps.google.co.jp/maps?q=loc:#{@shop.latitude},#{@shop.longitude}&iwloc=J",target: "_blank" %></p>'
+        }
+      ]);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      handler.getMap().setZoom(17);
+    });
+  </script>
+
+<div id="map"></div>
+
+<% if @shop.user_id == current_user.id %>
+<div>
+	<%= link_to '編集', edit_shop_path %>
+</div>
+
+<div>
+	<%= link_to '削除', shop_path, method: :delete %>
+</div>
+<% end %>
+<div>
+	<%= link_to '戻る', shops_path %>
+</div>

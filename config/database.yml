@@ -22,13 +22,6 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['DB_DATABASE'] %>
-  adapter: postgresql
   adapter: postgresql
   encoding: unicode
   pool: 5
-  collation: utf8mb4_general_ci
-  host: <%= ENV['DB_HOST'] %>
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-

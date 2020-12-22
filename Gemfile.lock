@@ -189,6 +189,7 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     popper_js (1.16.0)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -329,6 +330,7 @@ DEPENDENCIES
   mini_magick
   omniauth
   omniauth-google-oauth2
+  pg
   pry-byebug
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.2)
@@ -348,4 +350,8 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
+<<<<<<< HEAD
    2.2.1
+=======
+   2.1.4
+>>>>>>> ebd455894ac2151f9563587fb8eecb6c60a200c7

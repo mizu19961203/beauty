@@ -83,4 +83,3 @@ gem 'kaminari','~> 1.1.1'
 group :production do
   gem 'pg'
 end
-

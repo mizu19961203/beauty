@@ -7,11 +7,6 @@
   <div><%= f.label :内容 %></div>
   <div><%= f.text_field :description %></div>
 
-  <div><%= f.label :席数 %></div>
-  <div><%= f.collection_select :seet_id, Seet.all,:id,:seet %></div>
-
-  <div><%= f.label :こんな人にオススメ！！ %></div>
-  <div><%= f.collection_select :recommend_id, Recommend.all,:id,:text %></div>
 
   <div><%= f.label :場所 %></div>
   <div><%= f.text_field :address, placeholder: "住所" %></div>

@@ -9,70 +9,65 @@
            他のお客さまに公開されることはありません。
         </p>
       </div>
+
       <div class="form-group">
         <div class="form-header"><%= f.label :お名前（全角） %></div>
         <ul>
           <li><%= f.text_field :last_name %></li>
-          <!-- <li><%= f.text_field :first_name %></li> -->
+          <li><%= f.text_field :first_name %></li>
         </ul>
       </div>
-      
-      
-      
-      
-     <!--  <div class="form-group">
+
+     <div class="form-group">
         <div class="form-header"><%= f.label :お名前（カナ）   %></div>
         <ul>
           <li><%= f.text_field :last_name_kana %></li>
           <li><%= f.text_field :first_name_kana %></li>
         </ul>
       </div>
-      
+
       <div class="form-group">
         <div><%= f.label :生年月日 %></div>
         <div><%= f.date_select :birthday %></div>
       </div>
-      
+
       <div class="form-group">
         <div><%= f.label :メールアドレス %></div>
         <div><%= f.text_field :email %></div>
       </div>
-      
+
       <div class="form-group">
         <div><%= f.label :パスワード %></div>
         <div><%= f.text_field :password %></div>
       </div>
-      
+
       <div class="border"></div>
-       -->
-      
-      
-      
-      
+
+
       <div class="form-description">
         <h3 class="text-left">プロフィール登録</h3>
         <p>以下の情報はアプリ内で公開されます。</p>
       </div>
-      
-      <!-- <div class="form-group">
+
+      <div class="form-group">
         <div><%= f.label :プロフィール画像 %></div>
         <div><%= f.file_field :images, accept: "image/png, image/jpeg, image/gif" , multiple: true %></div>
-      </div> -->
-      
-      <!-- <div class="form-group">
-        <div><%= f.label :ニックネーム %></div>
-        <div><%= f.text_field :nick_name %></div>
       </div>
-      
+
+      <div class="form-group">
+        <div><%= f.label :ニックネーム %></div>
+        <div><%= f.text_field :name %></div>
+      </div>
+
       <div class="form-group">
         <div><%= f.label :美容師歴 %></div>
         <div><%= f.select :career_years, options_for_select((1..50).to_a) %>年</div>
       </div>
-      
+
       <div class="form-group">
         <div><%= f.label :主な活動エリア %></div>
         <div><%= f.collection_select :base_id, ::Base.all,:id,:base %></div>
-      
+
       <div class="form-group">
         <div><%= f.label :得意なスタイル %></div>
         <ul class="skilled-style">
@@ -80,17 +75,16 @@
           <li><%= f.text_field :skilled_style2 %></li>
         </ul>
       </div>
-      
-      
+
       <div class="form-group">
         <div><%= f.label :自己紹介文 %></div>
         <div><%= f.text_area :introduction, size: "60x15" %></div>
-      </div> -->
-      
+      </div>
+
       <div class="btn-stylists-submit">
         <%= f.submit %>
       </div>
-      
+
       <div class="btn_stylists-login-back-logout">
         <div class="btn signup-back">
           <%= link_to '戻る', root_path %>

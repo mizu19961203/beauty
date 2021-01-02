@@ -1,5 +1,5 @@
 class ShopsController < ApplicationController
-before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
+
 
   def new
     @shop = Shop.new
@@ -52,11 +52,5 @@ before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
                                 )
     end
 
-    def ensure_correct_user
-      @shop = Shop.find(params[:id])
-      if current_user != @shop.user
-        redirect_to stylists_path
-      end
-    end
 
 end

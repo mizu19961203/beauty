@@ -10,13 +10,10 @@
         <% @stylists.each do |stylist| %>
         <div class="productList-stylist l-box">
           <a class="productList-stylist-link" href="/stylists/<%= stylist.id %>">
-            <div class="productList-stylist-image">
-              <% stylist.images.each do |image| %>
-                <%= image_tag(image ,size: "240x240", fallback: "no_image.png",size: "240x240") %>
-              <% end %>
-            </div>
-            <h2 class="productList-stylist-name"><%= stylist.name %></h2>
-            <p class="productList-stylist-date-start"><%= stylist.date_start %></p>
+            
+            <h2 class="productList-stylist-name"><%= stylist.last_name %></h2>
+            <!-- <h2 class="productList-stylist-name"><%= stylist.first_name %></h2> -->
+            <!-- <p class="productList-stylist-date-start"><%= stylist.date_start %></p> -->
           </a>
         </div>
         <% end %>

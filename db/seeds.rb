@@ -43,9 +43,14 @@ Base.create({base: "葛飾区"})
 Base.create({base: "江戸川区"})
 
 
-
 Hairstyle.create({menu: "ショート"})
 Hairstyle.create({menu: "ロング"})
 Hairstyle.create({menu: "冠婚葬祭"})
 Hairstyle.create({menu: "メンズカット"})
 
+Shop.create({seat_fee: "無料"})
+Shop.create({seat_fee: "¥500"})
+Shop.create({seat_fee: "¥1,000"})
+Shop.create({seat_fee: "¥1,500"})
+Shop.create({seat_fee: "¥2,000"})
+Shop.create({seat_fee: "¥2,500"})

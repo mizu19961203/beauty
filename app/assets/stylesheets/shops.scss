@@ -2,7 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+input#shop_name,
+     #shop_address,
+                    {
+  width: 400px;
+}
 
-.test {
-    color: red;
+select#shop_seat_fee {
+  width: 150px;
 }

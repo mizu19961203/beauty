@@ -3,7 +3,7 @@
     margin-top: 10px;
 }
 
-.signup-stylists {
+.signup-page {
     background-color: #F4F8FA;
     background-image: url("signup_stylists.jpg");
     background-size: cover;
@@ -13,11 +13,11 @@
 
 }
 
-.signin-header {
+.signup-header {
     text-align: center;
 }
 
-.stylists-signup-form {
+.signup-form {
     width: 700px;
     margin: 0 auto;
     padding: 50px 50px 10px 50px;
@@ -55,18 +55,8 @@ input#stylist_last_name,
 
 select#stylist_birthday_1i,
       #stylist_birthday_2i,
-      #stylist_birthday_3i {
-
-    height: 48px;
-    padding: 7px 7px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: #fff;
-    line-height: 1.5;
-    font-size: 17px;
-}
-
-select#stylist_career_years,
+      #stylist_birthday_3i,
+      #stylist_career_years,
       #stylist_base_id {
 
     height: 48px;
@@ -76,7 +66,7 @@ select#stylist_career_years,
     background: #fff;
     line-height: 1.5;
     font-size: 17px;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .notice {
@@ -107,6 +97,6 @@ textarea#stylist_introduction {
     font-size: 17px;
 }
 
-.btn_stylists-login-back-logout {
+.btn-signup-back-logout {
     text-align: center;
 }

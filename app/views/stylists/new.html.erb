@@ -1,7 +1,7 @@
-<div class="signup-stylists">
+<div class="signup-page signup-stylists">
   <div class="container">
-    <div class="signin-header"><h1>スタイリスト登録</h1></div>
-    <div class="stylists-signup-form">
+    <div class="signup-header"><h1>スタイリスト登録</h1></div>
+    <div class="signup-form">
       <%= form_with model: @stylist, local: true do |f| %>
 
       <div class="form-description">
@@ -18,9 +18,6 @@
           <li><%= f.text_field :first_name %></li>
         </ul>
       </div>
-
-
-
 
       <div class="form-group">
         <div class="form-header"><%= f.label :お名前（カナ）   %></div>
@@ -46,10 +43,6 @@
       </div>
 
       <div class="border"></div>
-
-
-
-
 
       <div class="form-description">
         <h3 class="text-left">プロフィール登録</h3>
@@ -97,9 +90,9 @@
         <div><%= f.text_area :introduction, size: "60x15" %></div>
       </div>
 
-      <div class="btn-stylists-submit"><%= f.submit %></div>
+      <div class="btn-signup-action"><%= f.submit %></div>
 
-      <div class="btn_stylists-login-back-logout">
+      <div class="btn-signup-back-logout">
         <div class="btn signup-back">
           <%= link_to '戻る', root_path %>
         </div>

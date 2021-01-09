@@ -350,8 +350,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-<<<<<<< HEAD
-   2.2.1
-=======
    2.1.4
->>>>>>> ebd455894ac2151f9563587fb8eecb6c60a200c7

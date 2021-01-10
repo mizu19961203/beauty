@@ -56,7 +56,7 @@
 
       <div class="form-group">
         <div><%= f.label :ニックネーム %></div>
-        <div><%= f.text_field :nick_name %></div>
+        <div><%= f.text_field :name %></div>
       </div>
 
       <div class="form-group">
@@ -98,7 +98,6 @@
         </div>
         <div class="btn signup-logout">
           <%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>
-        </div>
         </div>
       </div>
     <% end %>

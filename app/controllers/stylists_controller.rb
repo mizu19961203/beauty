@@ -6,7 +6,7 @@ before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
   end
 
   def create
-    @stylist = Stylist.create(stylist_params)
+    @stylist = Stylist.new(stylist_params)
     if @stylist.save
       redirect_to stylists_path
     else
@@ -39,25 +39,25 @@ before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
     redirect_to shops_path
   end
 
-  private
-    def stylist_params
-      params.require(:stylist).permit( :name,
-  	                                   :description,
-  	                                   :date_start,
-  	                                   :date_fin,
-  	                                   :user_id,
-  	                                   :base_id,
-  	                                   :hairstyle_id,
-  	                                   :recommend_id,
-                                       images: []
-                                  	)
-    end
-
-    def ensure_correct_user
-      @stylist = Stylist.find(params[:id])
-      if current_user != @stylist.user
-        redirect_to stylists_path
-      end
-    end
+private
+  def stylist_params
+      params.require(:stylist).permit(  :last_name,
+                                        :first_name,
+                                        :last_name_kana,
+                                        :first_name_kana,
+                                        :birthday,
+                                        :email,
+                                        :password,
+                                        :name,
+                                        :base_id,
+                                        :user_id,
+                                        :recommend_id,
+                                        :career_years,
+                                        :skilled_style1,
+                                        :skilled_style2,
+                                        :description,
+                                        images: []
+                                    )
+  end
 
 end

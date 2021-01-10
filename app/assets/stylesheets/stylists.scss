@@ -3,66 +3,34 @@
     margin-top: 10px;
 }
 
-.signup-stylists {
-    background-color: #F4F8FA;
-    background-image: url("signup_stylists.jpg");
-    background-size: cover;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    
-}
-
-.signin-header {
-    text-align: center;
-}
-
-.stylists-signup-form {
-    width: 700px;
-    margin: 0 auto;
-    padding: 50px 50px 10px 50px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-
-.form-group li {
-    display: inline-flex;
-}
-
-input#stylist_last_name, 
+input#stylist_last_name,
      #stylist_first_name,
      #stylist_last_name_kana,
-     #stylist_first_name_kana, 
+     #stylist_first_name_kana,
      #stylist_password,
      #stylist_email,
-     #stylist_nick_name {
-         
-    height: 48px;
+     #stylist_nick_name,
+     #stylist_nick_name,
+     #stylist_skilled_style1,
+     #stylist_skilled_style2,
+     #stylist_instagram_account,
+     #stylist_twitter_account,
+     #stylist_facebook_account {
+
     width: 260px;
-    padding: 10px 16px 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: #fff;
-    line-height: 1.5;
-    font-size: 16px;
+}
+
+input#stylist_images {
+    display: inline-block;
+    width: 260px;
 }
 
 select#stylist_birthday_1i,
       #stylist_birthday_2i,
-      #stylist_birthday_3i {
-          
-    height: 48px;
-    padding: 7px 7px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: #fff;
-    line-height: 1.5;
-    font-size: 17px;
-}
-
-select#stylist_career_years, 
+      #stylist_birthday_3i,
+      #stylist_career_years,
       #stylist_base_id {
-          
+
     height: 48px;
     padding: 7px 7px;
     border-radius: 4px;
@@ -70,25 +38,28 @@ select#stylist_career_years,
     background: #fff;
     line-height: 1.5;
     font-size: 17px;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-input#stylist_nick_name {
+.notice {
+  color: red;
+  margin-left: 40px;
+}
+
+.sns-account span {
+  display: inline-block;
+  width: 100px;
+}
+
+input#stylist_instagram_account,
+     #stylist_twitter_account,
+     #stylist_facebook_account {
+
+    width: 70%;
     margin-bottom: 5px;
 }
 
-input#stylist_skilled_style1,
-     #stylist_skilled_style2 {
-         
-     height: 48px;
-    padding: 7px 7px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: #fff;
-    line-height: 1.5;
-    font-size: 17px;
-    margin-right: 10px;
-}
+
 
 textarea#stylist_introduction {
     padding: 7px 7px;
@@ -96,8 +67,4 @@ textarea#stylist_introduction {
     border: 1px solid #ccc;
     background: #fff;
     font-size: 17px;
-}
-
-.btn_stylists-login-back-logout {
-    text-align: center;
 }

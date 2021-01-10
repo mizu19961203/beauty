@@ -29,15 +29,14 @@
         </ul>
       </div>
 
-      <div class="form-group">
-        <div><%= f.label :パーマ剤 %>(メーカー名や品番など)</div>
-        <div><%= f.text_field :address %></div>
-      </div>
 
-      <div class="form-group">
-        <div><%= f.label :トリートメント剤 %>(メーカー名やシステム、ロットなど)</div>
-        <div><%= f.text_field :address %></div>
-      </div>
+  <div><%= f.label :店舗写真 %></div>
+  <div><%= f.file_field :images, accept: "image/png, image/jpeg, image/gif" , multiple: true %></div>
+
+  <div><%= f.submit %></div>
+
+
+<% end %>
 
       <div class="form-group">
         <div><%= f.label :設備・道具 %></div>

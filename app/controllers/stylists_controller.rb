@@ -36,28 +36,35 @@ before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
   def destroy
     @stylist = Stylist.find(params[:id])
     @stylist.destroy
-    redirect_to shops_path
+    redirect_to stylists_path
   end
 
 private
   def stylist_params
-      params.require(:stylist).permit(  :last_name,
-                                        :first_name,
-                                        :last_name_kana,
-                                        :first_name_kana,
-                                        :birthday,
-                                        :email,
-                                        :password,
-                                        :name,
-                                        :base_id,
-                                        :user_id,
-                                        :recommend_id,
-                                        :career_years,
-                                        :skilled_style1,
-                                        :skilled_style2,
-                                        :description,
-                                        images: []
-                                    )
+    params.require(:stylist).permit(  :last_name,
+                                      :first_name,
+                                      :last_name_kana,
+                                      :first_name_kana,
+                                      :birthday,
+                                      :email,
+                                      :password,
+                                      :name,
+                                      :base_id,
+                                      :user_id,
+                                      :recommend_id,
+                                      :career_years,
+                                      :skilled_style1,
+                                      :skilled_style2,
+                                      :description,
+                                      images: []
+                                  )
+  end
+
+  def ensure_correct_user
+    @stylist = Stylist.find(params[:id])
+    if current_user != @stylist.user
+      redirect_to stylists_path
+    end
   end
 
 end

@@ -22,7 +22,7 @@
     color: #0085C9;
     margin-top: 30px;
     padding-right: 30px;
-    
+
 }
 
 .top-menu ul {
@@ -71,6 +71,12 @@
 
 .top-message-img {
     float: right;
+    display: inline-block;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+}
+
+.top-img {
+border-radius: 5px;
 }
 
 .about-service-box-wrapper h3{
@@ -142,5 +148,5 @@
 .contents-box-item-message p {
     font-size: 20px;
     line-height: 35px;
-    
+
 }

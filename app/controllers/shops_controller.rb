@@ -1,5 +1,5 @@
 class ShopsController < ApplicationController
-
+before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
 
   def new
     @shop = Shop.new
@@ -8,7 +8,7 @@ class ShopsController < ApplicationController
   def create
     @shop = Shop.create(shop_params)
     if @shop.save
-      redirect_to shops_path
+      redirect_to shops_path , notice: '作成しました'
     else
       render 'new'
     end
@@ -20,6 +20,12 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
+    @hash = Gmaps4rails.build_markers(@shop) do |shop, marker|
+      marker.lat shop.latitude
+      marker.lng shop.longitude
+      marker.infowindow shop.address
+      marker.json({ address: shop.address })
+    end
   end
 
   def edit
@@ -38,6 +44,8 @@ class ShopsController < ApplicationController
     redirect_to shops_path
   end
 
+
+
   private
     def shop_params
       params.require(:shop).permit(:name,
@@ -50,6 +58,13 @@ class ShopsController < ApplicationController
                                    :recommend_id,
                                    images: []
                                 )
+    end
+
+    def ensure_correct_user
+      @shop = Shop.find(params[:id])
+      if current_user != @shop.user
+        redirect_to shops_path
+      end
     end
 
 

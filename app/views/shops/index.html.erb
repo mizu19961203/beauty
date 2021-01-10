@@ -19,10 +19,12 @@
         <td><%= image_tag(shop,size: "240x240",fallback:"no_image.png",size:"240x240") %></td>
         <td><%= shop.address %></td>
         <td><%= link_to '詳細', shop_path(shop) %></td>
+        <td><%= shop.user_id %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
 
 <div class="row">
     <div class="col-sm-10 col-sm-offset-1" style="text-align:center; padding:20px; font-size: 25px;">

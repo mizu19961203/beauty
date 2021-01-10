@@ -18,8 +18,10 @@
 <h3></h3>
 <h3></h3>
 
+<% if @stylist.user_id == current_user.id %>
 <h3><%= link_to '編集', edit_stylist_path(@stylist) %></h3>
 <h3><%= link_to '削除', stylist_path(@stylist), method: :delete ,"data-confirm" => "本当に削除しますか？"%></h3>
+<% end %>
 
 <h3><%= link_to '戻る', stylists_path %></h3>
 

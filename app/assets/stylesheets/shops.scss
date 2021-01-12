@@ -2,12 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-input#shop_name,
-     #shop_address,
-                    {
-  width: 400px;
-}
+
 
 select#shop_seat_fee {
   width: 150px;
+}
+
+.shops-signup-form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.shop-images ul {
+    display: flex;
+    list-style: none;
+}
+
+.shop-images img {
+    width: 180px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+}
+
+.form-groups {
+    column-count: 2;
+    margin: 0 auto;
+    height: 500px;
+    padding-top: 30px;
+}
+
+.signup-shops {
+  .form-group {
+    text-align: center;
+  }
+  .form-group input {
+    width: 90%;
+  }
+}
+
+.sns-account {
+  margin-top: 100px;
+}
+
+textarea#shop_introduction {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
 }

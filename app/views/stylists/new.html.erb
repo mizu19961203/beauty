@@ -90,15 +90,11 @@
         <div><%= f.text_area :introduction, size: "60x15" %></div>
       </div>
 
-      <div class="btn-signup-action"><%= f.submit %></div>
+      <div class="signup-submit-btn"><%= f.submit %></div>
 
-      <div class="btn-signup-back-logout">
-        <div class="btn signup-back">
-          <%= link_to '戻る', root_path %>
-        </div>
-        <div class="btn signup-logout">
-          <%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>
-        </div>
+      <div class="sign-up-option-btn">
+        <%= link_to '戻る', root_path %>
+        <%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>
       </div>
     <% end %>
   </div>

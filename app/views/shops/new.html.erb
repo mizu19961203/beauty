@@ -1,68 +1,73 @@
 <div class="signup-page signup-shops">
   <div class="container">
     <div class="signup-header"><h1>お席貸出し新規登録</h1></div>
-    <div class="signup-form">
+    <div class="shops-signup-form">
       <%= form_with model: @shop, local: true do |f| %>
 
-      <div class="form-group">
-        <div class="form-header"><%= f.label :店舗名 %></div>
-        <div><%= f.text_field :name %></div>
-      </div>
-
-      <div class="form-group">
-        <div class="form-header"><%= f.label :住所   %></div>
-        <div><%= f.text_field :address %></div>
-      </div>
-
-      <div class="form-group">
-        <div><%= f.label :貸出料金 %>/h</div>
-        <div><%= f.collection_select :seat_fee, ::Shop.all, :id, :seat_fee %></div>
-      </div>
-
-      <div class="form-group">
-        <div><%= f.label :カラー剤 %>(メーカー名や品番など)</div>
+      <div class="shop-images">
+        <div><%= f.label :店舗写真 %></div>
+        <div><%= f.file_field :images, accept: "image/png, image/jpeg, image/gif" , multiple: true %></div>
         <ul>
-          <li><%= f.text_field :address %></li>
-          <li><%= f.text_field :address %></li>
-          <li><%= f.text_field :address %></li>
-          <li><%= f.text_field :address %></li>
+          <li><%= image_tag 'example_img_1.png' %></li>
+          <li><%= image_tag 'example_img_2.png' %></li>
+          <li><%= image_tag 'example_img_3.png' %></li>
+          <li><%= image_tag 'example_img_1.png' %></li>
+          <li><%= image_tag 'example_img_2.png' %></li>
         </ul>
       </div>
 
-      <div class="form-group">
-        <div><%= f.label :店舗写真 %></div>
-        <div><%= f.file_field :images, accept: "image/png, image/jpeg, image/gif" , multiple: true %></div>
-      </div>
+      <div class="form-groups">
 
-      <div class="form-group">
-        <div><%= f.label :設備・道具 %></div>
-        <div><%= f.text_field :address %></div>
-      </div>
-
-      <div class="form-group">
-        <div><%= f.label :SNSアカウント %><span class="notice">(例)https://www.instagram.com/matcha/</span></div>
-          <div class="sns-account">
-            <div><span>・Instagram</span><%= f.text_field :instagram_account %></div>
-            <div><span>・Twitter</span><%= f.text_field :twitter_account %></div>
-            <div><span>・Facebook</span><%= f.text_field :facebook_account %></div>
-          </div>
-      </div>
-
-      <div class="form-group">
-        <div><%= f.label :店舗紹介文 %></div>
-        <div><%= f.text_area :introduction, size: "60x15" %></div>
-      </div>
-
-      <div class="btn-signup-action"><%= f.submit %></div>
-
-      <div class="btn-signup-back-logout">
-        <div class="btn signup-back">
-          <%= link_to '戻る', root_path %>
+        <div class="form-group">
+          <div><%= f.text_field :name, placeholder: "店舗名" %></div>
         </div>
-        <div class="btn signup-logout">
-          <%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>
+
+        <div class="form-group">
+          <div><%= f.text_field :address, placeholder: "住所" %></div>
         </div>
+
+        <div class="form-group">
+
+          <div><%= f.label :貸出料金 %>/h<%= f.collection_select :seat_fee, ::Shop.all, :id, :seat_fee %></div>
         </div>
+
+        <div class="form-group">
+          <div><%= f.text_field :address, placeholder: "使用しているカラー剤" %></div>
+        </div>
+
+        <div class="form-group">
+          <div><%= f.text_field :address, placeholder: "使用しているパーマ剤" %></div>
+        </div>
+
+        <div class="form-group">
+          <div><%= f.text_field :address, placeholder: "使用しているトリートメント剤" %></div>
+        </div>
+
+        <div class="form-group">
+          <div><%= f.text_field :address, placeholder: "道具、設備、アメニティ" %></div>
+        </div>
+
+        <div class="form-group">
+            <div class="sns-account">
+              <div><%= f.text_field :instagram_account, placeholder: "Instagram" %></div>
+              <div><%= f.text_field :twitter_account, placeholder: "Twitter" %></div>
+              <div><%= f.text_field :facebook_account, placeholder: "Facebook" %></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <div><%= f.label :店舗紹介文 %></div>
+          <div><%= f.text_area :introduction, size: "53x10" %></div>
+        </div>
+      </div>
+
+      <div class="signup-submit-btn"><%= f.submit %></div>
+
+      <div class="sign-up-option-btn">
+        <%= link_to '戻る', root_path %>
+        <%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>
+      </div>
+
       </div>
     <% end %>
   </div>

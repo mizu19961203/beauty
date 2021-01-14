@@ -20,7 +20,7 @@
     		<a href ="#" class="btn register-btn">事前登録をする</a>
     	</div>
 		<div class="top-message-img">
-			<%= image_tag 'img_for_stylist.jpg', style: "height: 320px; width: 380px;", class:"top-img"  %>
+			<%= image_tag 'top_message_icon.png', style: "height: 320px; width: 380px;"  %>
 		</div>
     </div>
 </div>
@@ -29,19 +29,22 @@
 		<h3>Matchaとは</h3>
 		<div class="about-service-box">
 			<div class="about-service-box-item">
-				<div class="about-service-box-item-head">美容師さんに適正価格を</div>
-				<div><%#= image_tag 'main1.jpg', style: "height: 300px; weight: 300px;" %></div>
-				<p>働く時間、働くエリアを自分で決められて、自由な働き方を実現しましょう。Matchaは美容師さんの施術に対して"利益率90%"を目指します。</p>
+				<div class="about-service-box-item-head">For Stylist</div>
+				<div><%= image_tag 'top_icon_1.png', style: "height: 300px; weight: 300px;" %></div>
+				<p>Matchaを使って自由な働き方を実現しましょう。美容師さんの施術に対し利益率90%を目指します。</p>
+				<%= link_to "美容師さんはこちら" ,new_stylist_path %>
 			</div>
 			<div class="about-service-box-item">
-				<div class="about-service-box-item-head">理想の美容師さんを見つけられる</div>
-				<div><%#= image_tag 'main1.jpg', style: "height: 300px; weight: 300px;" %></div>
-			  <p>美容師さんの得意なスタイルや過去の写真が見れるから、理想の専属美容師さんに出会えます。</p>
+				<div class="about-service-box-item-head">For Customer</div>
+				<div><%= image_tag 'top_icon_2.png', style: "height: 300px; weight: 300px;" %></div>
+			  <p>あなたの理想とするスタイルを得意とする専属美容師さんをMatchaで見つけましょう。</p>
+				<%= link_to "美容師さんを探す" , stylists_path %>
 			</div>
 			<div class="about-service-box-item">
-				<div class="about-service-box-item-head">お店の空いている席を貸し出せる</div>
-				<div><%#= image_tag 'main1.jpg', style: "height: 300px; weight: 300px;" %></div>
-				<p>空いている"席"を有効活用することで、お店の売り上げを増やすことができます。席を常に稼動させて席の空き時間を減らしましょう。</p>
+				<div class="about-service-box-item-head">For Salon owner</div>
+				<div><%= image_tag 'top_icon_3.png', style: "height: 300px; weight: 300px;" %></div>
+				<p>空いている"施術台"を有効活用しませんか？Matchaで席を貸し出して売り上げをあげましょう。</p>
+				<%= link_to "空いている席を貸す" ,new_shop_path %>
 			</div>
 		</div>
 	</div>
@@ -50,29 +53,20 @@
 	<div class="container">
 		<div class="contents-box">
 			<div class="contents-box-item">
-				<div>
-					<%= image_tag 'img_for_stylist.jpg', style: "height: 370px; width: 370px;" %>
-				</div>
 				<div class="contents-box-item-message">
-					<h3>美容師さんに適正価格を</h3>
+					<h3>For Stylist</h3>
 					<p>店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。あ</p>
 				</div>
 			</div>
 			<div class="contents-box-item">
-				<div>
-					<%= image_tag 'img_for_salon.jpg', style: "height: 370px; width: 370px;" %>
-				</div>
 				<div class="contents-box-item-message">
-					<h3>空席を有効活用できる</h3>
+					<h3>For Customer</h3>
 					<p>店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。</p>
 				</div>
 			</div>
 			<div class="contents-box-item">
-				<div>
-					<%= image_tag 'img_for_user.jpg', style: "height: 370px; width: 370px;" %>
-				</div>
 				<div class="contents-box-item-message">
-					<h3>理想の美容師さんを〇〇的に</h3>
+					<h3>For Salon owner</h3>
 					<p>店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。店舗を必要としないため、美容師さんに従来より高い利益率を還元することができます。時間と場所を選ばないため、副業美容師という新しい働き方も可能になります。</p>
 				</div>
 			</div>

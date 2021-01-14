@@ -28,7 +28,7 @@
 
         <div class="form-group">
 
-          <div><%= f.label :貸出料金 %>/h<%= f.collection_select :seat_fee, ::Shop.all, :id, :seat_fee %></div>
+          <div><%= f.label :貸出料金 %>/h<%= f.collection_select :seat_fee_id, ::Seet.all,:seat_fees,:seat_fees %>円</div>
         </div>
 
         <div class="form-group">

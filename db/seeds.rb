@@ -10,6 +10,21 @@ Seet.create({seet: "9"})
 Seet.create({seet: "10"})
 Seet.create({seet: "11"})
 
+Seet.create({seat_fees: "無料"})
+Seet.create({seat_fees: "500"})
+Seet.create({seat_fees: "1000"})
+Seet.create({seat_fees: "1500"})
+Seet.create({seat_fees: "2000"})
+Seet.create({seat_fees: "2500"})
+Seet.create({seat_fees: "3000"})
+Seet.create({seat_fees: "3500"})
+Seet.create({seat_fees: "4000"})
+Seet.create({seat_fees: "4500"})
+Seet.create({seat_fees: "5000"})
+
+
+
+
 Recommend.create({text: "パーマかけたい"})
 Recommend.create({text: "ショートにしたい"})
 Recommend.create({text: "前髪切りたい"})
@@ -47,10 +62,3 @@ Hairstyle.create({menu: "ショート"})
 Hairstyle.create({menu: "ロング"})
 Hairstyle.create({menu: "冠婚葬祭"})
 Hairstyle.create({menu: "メンズカット"})
-
-Shop.create({seat_fee: "無料"})
-Shop.create({seat_fee: "¥500"})
-Shop.create({seat_fee: "¥1,000"})
-Shop.create({seat_fee: "¥1,500"})
-Shop.create({seat_fee: "¥2,000"})
-Shop.create({seat_fee: "¥2,500"})

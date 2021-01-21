@@ -1,23 +1,23 @@
 <div class="login-page">
   <div class="container login-page-container">
-    <h1 class="login-heading">ログイン</h1>
+    <h1 class="heading">ログイン</h1>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="login-form-box">
-        <div class="login-form-item">
-          <%= f.label :email, "Eメール" %>
+      <div class="form-box">
+        <div class="form-item">
+          <%= f.label :email, "Eメールアドレス" %>
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
-        <div class="login-form-item">
+        <div class="form-item">
           <%= f.label :password, "パスワード" %>
           <%= f.password_field :password, autocomplete: "current-password" %>
         </div>
         <% if devise_mapping.rememberable? %>
-        <div class="login-remember">
+        <div class="remember">
           <%= f.check_box :remember_me %>
           <%= f.label :remember, "ログインしたままにする" %>
         </div>
         <% end %>
-        <div class="action login-submit-action">
+        <div class="action submit-action">
           <%= f.submit "ログイン" %>
         </div>
       <% end %>
@@ -28,7 +28,7 @@
           <%= link_to "プライバシー規約", "#" %>
           に同意するものとみなされます。
         </div>
-        <div class="signin-text-link">
+        <div class="text-link">
             <%- if devise_mapping.omniauthable? %>
               <%- resource_class.omniauth_providers.each do |provider| %>
                 <%# link_to "#{OmniAuth::Utils.camelize(provider)}でログインする", omniauth_authorize_path(resource_name, provider) %>
@@ -36,10 +36,10 @@
                 <% end %>
              <% end %>
         </div>
-        <div class="signin-text-link">
+        <div class="text-link">
           <p>アカウントをお持ちでない方は<%= link_to "こちら", new_user_registration_path %>から新規登録してください</p>
         </div>
-        <div class="signin-text-link">
+        <div class="text-link">
           <p>パスワードを忘れた方は<%= link_to "こちら", new_user_password_path %>へ</p>
         </div>
       </div>

@@ -7,21 +7,18 @@
     			<li><i class="fas fa-search"></i><%= link_to "美容師さんを探す" , stylists_path %></li>
     			<li><i class="fas fa-chair"></i><%= link_to " 空いている席を貸す " ,new_shop_path %></li>
     		</ul>
-    	</div>
+    </div>
 	<div class="container top-container">
-		<div class="top-message">
-    		<h1>美容師という職業をもっと自由に
-    		<br>専属フリーランス美容師とマッチしよう
-    		</h1>
-    		<p> 時間と場所に縛られない美容師という選択。
-    		<br>お席は店舗の空き席を活用。
-    		<br>美容師さん本人が広告塔へ。
-    		</p>
-    		<a href ="#" class="btn register-btn">事前登録をする</a>
-    	</div>
 		<div class="top-message-img">
-			<%= image_tag 'top_message_icon.png', style: "height: 320px; width: 380px;"  %>
+			<%= image_tag 'top_message_icon.png'  %>
 		</div>
+		<div class="top-message">
+    		<h1>Matcha</h1>
+				<p>美容専門マッチングアプリ</p>
+				<div class="btn">
+					<%= link_to "はじめる", new_user_registration_path %>
+				</div>
+    	</div>
     </div>
 </div>
 <div class="about-service-box-wrapper">

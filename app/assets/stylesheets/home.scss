@@ -1,3 +1,5 @@
+@media (min-width:770px) {
+
 .top-wrapper {
     width: 100%;
     height: 500px;
@@ -72,6 +74,11 @@
 .top-message-img {
     float: right;
     display: inline-block;
+}
+
+.top-message-img img {
+  height: 320px;
+  width: 380px;
 }
 
 .top-img {
@@ -152,5 +159,7 @@ border-radius: 5px;
 .contents-box-item-message p {
     font-size: 20px;
     line-height: 35px;
+
+}
 
 }

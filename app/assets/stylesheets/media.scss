@@ -60,7 +60,12 @@ header {
   }
 
   .top-message {
+    display: none;
+  }
+
+  .media-top-message {
     text-align: center;
+    color: #0085C9;
 
     h1 {
       font-size: 60px;
@@ -110,6 +115,13 @@ header {
 /*----top/about-----*/
 .about-service-box-wrapper {
 
+  h3 {
+    text-align: center;
+    padding: 15px;
+    font-size: 35px;
+    margin: 0;
+  }
+
     .about-service-box {
 
       .about-service-box-item {
@@ -117,7 +129,9 @@ header {
       }
 
       .about-service-box-item-head {
-
+        text-align: center;
+        font-size: 25px;
+        font-weight: 400;
       }
     }
   }

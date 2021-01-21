@@ -48,9 +48,17 @@
     font-size: 45px;
 }
 
+.top-message div {
+  color: #0085C9;
+  font-size: 60px;
+  padding: 25px 0;
+}
+
 .top-message p {
-    margin: 20px 0;
-    letter-spacing: 2px;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  color: lightslategrey;
+  font-size: 20px;
 }
 
 .btn {
@@ -83,6 +91,10 @@
 
 .top-img {
 border-radius: 5px;
+}
+
+.media-top-message {
+  display: none;
 }
 
 .about-service-box-wrapper h3{
@@ -126,7 +138,9 @@ border-radius: 5px;
 }
 
 .about-service-box-item img {
-  color: #68e1fd
+  color: #68e1fd;
+  height: 300px;
+  width: auto;
 }
 
 .contents-wrapper {

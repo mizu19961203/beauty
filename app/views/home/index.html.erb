@@ -13,33 +13,42 @@
 			<%= image_tag 'top_message_icon.png'  %>
 		</div>
 		<div class="top-message">
-    		<h1>Matcha</h1>
-				<p>美容専門マッチングアプリ</p>
-				<div class="btn">
-					<%= link_to "はじめる", new_user_registration_path %>
-				</div>
-    	</div>
+			<h1>美容をツナグ。美容でツナグ。</h1>
+			<div>Matcha</div>
+			<p>
+				時間と場所にとらわれない美容師という働き方 <br>
+				お店は空いている施術台を貸出して有効活用 <br>
+				専属の美容師を見つけてストレスフリーな環境へ
+			</p>
+		</div>
+		<div class="media-top-message">
+    	<h1>Matcha</h1>
+			<p>美容専門マッチングアプリ</p>
+			<div class="btn">
+				<%= link_to "はじめる", new_user_registration_path %>
+			</div>
     </div>
+  </div>
 </div>
 <div class="about-service-box-wrapper">
+	<h3>Matchaとは</h3>
 	<div class="container">
-		<h3>Matchaとは</h3>
 		<div class="about-service-box">
 			<div class="about-service-box-item">
 				<div class="about-service-box-item-head">For Stylist</div>
-				<div><%= image_tag 'top_icon_1.png', style: "height: 300px; weight: 300px;" %></div>
+				<div><%= image_tag 'top_icon_1.png' %></div>
 				<p>Matchaを使って自由な働き方を実現しましょう。美容師さんの施術に対し利益率90%を目指します。</p>
 				<%= link_to "美容師さんはこちら" ,new_stylist_path %>
 			</div>
 			<div class="about-service-box-item">
 				<div class="about-service-box-item-head">For Customer</div>
-				<div><%= image_tag 'top_icon_2.png', style: "height: 300px; weight: 300px;" %></div>
+				<div><%= image_tag 'top_icon_2.png' %></div>
 			  <p>あなたの理想とするスタイルを得意とする専属美容師さんをMatchaで見つけましょう。</p>
 				<%= link_to "美容師さんを探す" , stylists_path %>
 			</div>
 			<div class="about-service-box-item">
 				<div class="about-service-box-item-head">For Salon owner</div>
-				<div><%= image_tag 'top_icon_3.png', style: "height: 300px; weight: 300px;" %></div>
+				<div><%= image_tag 'top_icon_3.png' %></div>
 				<p>空いている"施術台"を有効活用しませんか？Matchaで席を貸し出して売り上げをあげましょう。</p>
 				<%= link_to "空いている席を貸す" ,new_shop_path %>
 			</div>

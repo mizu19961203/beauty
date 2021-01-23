@@ -1,3 +1,3 @@
-class Seet < ApplicationRecord
-	has_many :shops
-end
+# class Seet < ApplicationRecord
+# 	has_many :shops
+# end

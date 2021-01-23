@@ -3,6 +3,7 @@ before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
 
   def new
     @shop = Shop.new
+    @shop.images.build
   end
 
   def create
@@ -10,6 +11,7 @@ before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
     if @shop.save
       redirect_to shops_path , notice: '作成しました'
     else
+      logger.debug @shop.errors.inspect
       render 'new'
     end
   end
@@ -56,7 +58,7 @@ before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
                                    :user_id,
                                    :seet_id,
                                    :recommend_id,
-                                   images: []
+                                   images_attributes: [:image_url]
                                 )
     end
 

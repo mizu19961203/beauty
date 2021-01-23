@@ -10,8 +10,9 @@
 
 <div>
   店舗写真 :
-  <% @shop.images.each do |image| %>
-	 <%= image_tag(image,fallback: "no_image.png") %>
+  <% @shop.images.each do |i| %>
+   <%= image_tag i.image_url.url %><!--
+	 <%= image_tag(image,fallback: "no_image.png") %> -->
   <% end %>
 </div>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_14_154440) do
+ActiveRecord::Schema.define(version: 2021_01_19_132710) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(version: 2021_01_14_154440) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "images", force: :cascade do |t|
+    t.integer "shop_id"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "recommends", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -72,6 +79,7 @@ ActiveRecord::Schema.define(version: 2021_01_14_154440) do
     t.float "latitude"
     t.float "longitude"
     t.string "seat_fee_id"
+    t.string "image"
   end
 
   create_table "stylists", force: :cascade do |t|

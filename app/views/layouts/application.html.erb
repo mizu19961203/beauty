@@ -44,6 +44,7 @@
                     <li>
                       <%= link_to ' ログアウト ',destroy_user_session_path, method: :delete%>
                     </li>
+                    <li><a href="#"><%= current_user.email %> 様</a></li>
                     <% else %>
 
                     <li>

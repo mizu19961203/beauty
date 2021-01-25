@@ -115,7 +115,7 @@ input, select {
 
 /*--------------------reset_done-------------------- */
 
-
+@media (min-width:770px) {
 
 
 header {
@@ -143,6 +143,10 @@ header {
 
 .site-menu {
     float: right;
+}
+
+.media-menu-icon {
+  display: none;
 }
 
 .header-list {
@@ -250,4 +254,6 @@ footer {
 
 .sign-up-option-btn a {
     padding: 5px;
+}
+
 }

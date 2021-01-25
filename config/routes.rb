@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   resources :shops
   resources :stylists
 
-  get 'thank' => 'home#index'
+  get 'thank' => 'thank#index'
 
 end

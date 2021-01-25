@@ -1,0 +1,2 @@
+class ThankController < ApplicationController
+end

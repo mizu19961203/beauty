@@ -2,7 +2,7 @@
 /* ここにSP向けのCSS指定 */
 
 
-/*----top page-----*/
+/*----header-----*/
 header {
     width: 100%;
     height: 70px;
@@ -33,6 +33,32 @@ header {
     }
 }
 
+/*----footer-----*/
+footer {
+  background-color: #0085C9;
+
+  #nav {
+    .all-footer-list {
+      .footer-list {
+        margin: 0;
+        li {
+          border-bottom: 2px solid white;
+          padding: 20px;
+
+          a {
+            color: white;
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    background-color: white;
+    color: #0085C9;
+  }
+}
 
 
 /*----top/top-----*/
@@ -141,6 +167,7 @@ header {
         background-color: #F4F8FA;
         margin-bottom: 10px;
         text-align: center;
+        border-radius: 15px;
 
         .about-service-box-item-head {
           text-align: center;

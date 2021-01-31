@@ -1,66 +1,6 @@
 @media (max-width:767.98px) {
 /* ここにSP向けのCSS指定 */
 
-
-/*----header-----*/
-header {
-    width: 100%;
-    height: 70px;
-    background-color: #0085C9;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-
-    .header-left {
-      font-size: 30px;
-      line-height: 70px;
-      display: inline-block;
-      margin-left: 20px;
-      color: white;
-    }
-
-    .site-menu {
-      font-size: 30px;
-      float: right;
-      line-height: 70px;
-      margin-right: 20px;
-
-      a { color: white; }
-
-      .header-list li {
-        display: none;
-      }
-    }
-}
-
-/*----footer-----*/
-footer {
-  background-color: #0085C9;
-
-  #nav {
-    .all-footer-list {
-      .footer-list {
-        margin: 0;
-        li {
-          border-bottom: 2px solid white;
-          padding: 20px;
-
-          a {
-            color: white;
-            display: block;
-            text-align: center;
-          }
-        }
-      }
-    }
-  }
-  .copyright {
-    background-color: white;
-    color: #0085C9;
-  }
-}
-
-
 /*----top/top-----*/
 .top-wrapper {
   width: 100%;
@@ -126,16 +66,8 @@ footer {
         background-color: #0085C9;
       }
     }
-
   }
-
-
 }
-
-
-
-
-
 
 
 /*----top/about-----*/
@@ -189,7 +121,6 @@ footer {
         }
       }
     }
-  }
 }
 
 
@@ -208,6 +139,7 @@ footer {
       }
     }
   }
+}
 
 }
 

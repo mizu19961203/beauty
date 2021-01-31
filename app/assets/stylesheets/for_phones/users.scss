@@ -1,13 +1,13 @@
 @media (max-width:767.98px) {
 
-/* -------------users/sign_up---------------- */
-.signup-page {
+/* -------------users/sign_up, sign_in---------------- */
+.signup-page, .login-page {
   background-image: url(../signup_stylists.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 0 20px 0;
 
-  .signup-page-container {
+  .signup-page-container, .login-page-container {
     .form-box {
       width: 100%;
       background-color: rgba(255, 255, 255, 0.8);
@@ -55,24 +55,10 @@
         }
       }
 
-      .caution {
+      .caution, .text-link {
         font-size: 12px;
         text-align: center;
-        margin-bottom: 25px;
-
-        a {
-
-        }
-      }
-
-      .text-link {
-        font-size: 12px;
-        text-align: center;
-        margin-bottom: 30px;
-
-        p {
-
-        }
+        margin-bottom: 10px;
       }
     }
   }

@@ -1,0 +1,150 @@
+@media (max-width:767.98px) {
+/* ここにSP向けのCSS指定 */
+
+/*----top/top-----*/
+.top-wrapper {
+  width: 100%;
+  height: 560px;
+  background-color: cornsilk;
+  position: relative;
+
+  .top-menu {
+    display: none;
+  }
+
+  .top-container {
+
+  }
+
+  .top-message-img {
+    padding-top: 20px;
+
+    img {
+      height: 310px;
+      width: 345px;
+    }
+  }
+
+  .top-message {
+    display: none;
+  }
+
+  .media-top-message {
+    text-align: center;
+    color: #0085C9;
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 5px;
+
+      a {
+        border: 3px solid;
+        display: block;
+        text-align: center;
+        background-color: white;
+        color: #0085C9;
+        border-radius: 30px;
+        padding: 10px 50px;
+        margin-top: 15px;
+        letter-spacing: 3px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      a:hover {
+        color: white;
+        background-color: #0085C9;
+      }
+    }
+  }
+}
+
+
+/*----top/about-----*/
+.about-service-box-wrapper {
+
+  h3 {
+    text-align: center;
+    padding: 15px;
+    font-size: 35px;
+    margin: 0;
+  }
+
+    .about-service-box {
+
+      a {
+        border: 3px solid;
+        display: block;
+        text-align: center;
+        background-color: #F4F8FA;
+        color: #0085C9;
+        border-radius: 30px;
+        padding: 15px;
+        margin-top: 15px;
+        letter-spacing: 3px;
+        font-size: 18px;
+      }
+
+      .about-service-box-item {
+        background-color: #F4F8FA;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 15px;
+
+        .about-service-box-item-head {
+          text-align: center;
+          font-size: 32px;
+          font-weight: 400;
+          color: #0085C9;
+          text-shadow: 2px 2px sandybrown;
+          padding: 10px;
+        }
+
+        img {
+          width: 140px;
+          height: 200px;
+        }
+
+        p {
+          padding: 10px 0 20px 0;
+          line-height: 25px;
+        }
+      }
+    }
+}
+
+
+
+
+
+/*----top/contents-----*/
+.contents-wrapper {
+
+  .contents-box {
+
+    .contents-box-item {
+
+      .contents-box-item-message {
+
+      }
+    }
+  }
+}
+
+}
+
+
+
+@media (min-width:768px) {
+/* ここにPC向けのCSS指定 */
+}

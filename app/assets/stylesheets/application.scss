@@ -115,7 +115,7 @@ input, select {
 
 /*--------------------reset_done-------------------- */
 
-
+@media (min-width:770px) {
 
 
 header {
@@ -134,15 +134,26 @@ header {
 }
 
 .header-left {
-    color: white;
     display: inline-block;
     font-size: 60px;
     line-height: 80px;
     padding-left: 20px;
+
+    a {color: white;
+      &:hover {
+        text-decoration: none;
+        color: white;
+        text-shadow: 2px 2px black;
+      }
+    }
 }
 
 .site-menu {
     float: right;
+}
+
+.media-menu-icon {
+  display: none;
 }
 
 .header-list {
@@ -192,62 +203,4 @@ footer {
     text-decoration: none;
 }
 
-
-
-/* signupページ共通スタイル */
-
-.signup-page {
-    background-color: #F4F8FA;
-    background-image: url("signup_stylists.jpg");
-    background-size: cover;
-    width: 100%;
-}
-
-.signup-header {
-    text-align: center;
-    padding-top: 50px;
-}
-
-.signup-form {
-    width: 700px;
-    margin: 0 auto;
-    padding: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-
-.form-group input, select {
-  height: 48px;
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  line-height: 1.5;
-  font-size: 16px;
-}
-
-.form-group li {
-    display: inline-flex;
-}
-
-.signup-submit-btn {
-    text-align: center;
-
-    input[type="submit"] {
-      height: 48px;
-      padding: 10px 40px 8px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      background: #fff;
-      line-height: 1.5;
-      font-size: 16px;
-    }
-
-    input[type="submit"]:hover {
-      background-color: rgba(0,133,201,0.5)
-    }
-}
-
-.sign-up-option-btn a {
-    padding: 5px;
 }

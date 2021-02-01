@@ -1,3 +1,5 @@
+@media (min-width:770px) {
+
 .login-page, .signup-page {
   background-image: url(signup_stylists.jpg);
   background-repeat: no-repeat;
@@ -6,13 +8,13 @@
   .login-page-container,
   .signup-page-container {
     padding-bottom: 100px;
+    padding-top: 60px;
 
     .heading {
       text-align: center;
-      padding: 30px 5px 5px 5px
     }
     .form-box {
-      width: 50%;
+      width: 60%;
       margin: 0 auto;
       padding: 50px;
       background-color: rgba(255, 255, 255, 0.8);
@@ -56,16 +58,17 @@
       .caution {
         font-size: 15px;
         margin-bottom: 25px;
+        text-align: center;
       }
 
       .text-link {
         font-size: 15px;
-      }
+        text-align: center;
 
-      .text-link p {
-        margin-bottom: 5px;
+        p {margin-bottom: 5px;}
       }
-
     }
   }
+}
+
 }

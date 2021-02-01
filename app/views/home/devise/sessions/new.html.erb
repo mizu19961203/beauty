@@ -1,8 +1,8 @@
 <div class="login-page">
   <div class="container login-page-container">
-    <h1 class="heading">ログイン</h1>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-box">
+        <h1 class="heading">ログイン</h1>
         <div class="form-item">
           <%= f.label :email, "Eメールアドレス" %>
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>

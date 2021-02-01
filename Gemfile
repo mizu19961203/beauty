@@ -78,6 +78,8 @@ gem 'bootstrap', '~>4.1.1'
 gem 'jquery-rails'
 gem 'bullet'
 gem 'kaminari','~> 1.1.1'
+gem 'carrierwave'
+gem 'fog-aws'
 
 
 group :production do

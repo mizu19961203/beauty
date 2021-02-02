@@ -41,9 +41,6 @@
   });
 </script>
 
-
-
-
 <% if @shop.user_id == current_user.id %>
 <h3><%= link_to '編集', edit_shop_path(@shop) %></h3>
 <h3><%= link_to '削除', shop_path(@shop), method: :delete ,"data-confirm" => "本当に削除しますか？"%></h3>

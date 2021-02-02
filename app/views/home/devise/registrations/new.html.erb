@@ -1,14 +1,20 @@
 <div class="signup-page">
   <div class="container signup-page-container">
-    <h1 class="heading">新規登録</h1>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <div class="form-box">
+        <h1 class="heading">アカウントを新規登録</h1>
+
+        <div class="form-item">
+          <%= f.label :name, "ユーザー名" %><br />
+          <%= f.email_field :name, placeholder: "山田太郎" %>
+        </div>
+
         <div class="form-item">
           <%= f.label :email, "Eメールアドレス" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "matcha@gmail.com" %>
         </div>
         <div class="form-item">
-          <%= f.label :password, "パスワード(6文字以上)" %>
+          <%= f.label :password, "パスワード" %>
           <%= f.password_field :password, autocomplete: "new-password" %>
         </div>
         <div class="form-item">
@@ -32,7 +38,7 @@
           に同意するものとみなされます。
         </div>
         <div class="text-link">
-          <p>すでにアカウントをお持ちの方は<%= link_to "こちら", new_user_session_path %>からログインしてください</p>
+          <p>既にアカウントをお持ちの方は<%= link_to "こちら", new_user_session_path %>からログインしてください</p>
         </div>
     <% end %>
   </div>

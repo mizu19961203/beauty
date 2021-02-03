@@ -1,10 +1,20 @@
-<h1>ありがとう</h1>
-<h1>thanks you</h1>
-<h1>どういたしまして</h1>
-<h1>youre welcome</h1>
-
-<h1>ページ作成よろしく!!</h1>
-<h1>cssも忘れずにね!!</h1>
-
-
-
+<div class="main thanks-page">
+  <div class="container">
+    <div class="thanks-page-box">
+      <div class="heading">
+        <!-- 〇〇〇〇様　<br> -->
+        会員登録ありがとうございます。
+      </div>
+      <div class="text">
+        <p>
+          ご登録メールアドレスへ本登録URLが記載されたメールをお送りいたしました。
+          URLから本登録をお済ませください。
+        </p>
+        <%= link_to "トップページへ戻る", root_path %>
+        <p>
+          Matchaからのメールが届かない場合は、<%= link_to "こちら", root_path %>から再度メールの送信をお願い致します。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

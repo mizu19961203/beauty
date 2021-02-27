@@ -25,7 +25,7 @@ $(function(){
       //読み込みが完了すると、srcにfileのURLを格納
       fileReader.onloadend = function() {
         var src = fileReader.result
-        var html= `<div class='item-image' data-image="${file.name}">
+        var html= "<div class='item-image' data-image="${file.name}">
                     <div class=' item-image__content'>
                       <div class='item-image__content--icon'>
                         <img src=${src} width="114" height="80" >
@@ -34,7 +34,7 @@ $(function(){
                     <div class='item-image__operetion'>
                       <div class='item-image__operetion--delete'>削除</div>
                     </div>
-                  </div>`
+                  </div>"
         //image_box__container要素の前にhtmlを差し込む
         $('#image-box__container').before(html);
       };

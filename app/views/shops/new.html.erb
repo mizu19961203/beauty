@@ -4,25 +4,56 @@
     <div class="shops-signup-form">
       <%= form_with model: @shop, local: true do |f| %>
 
-      <div class="shop-images">
-        <!-- <div><%= f.label :店舗写真 %></div>
-        <div><%= f.file_field :images, accept: "image/png, image/jpeg, image/gif" , multiple: true %></div>
-        <ul>
-          <li><%= image_tag 'example_img_1.png' %></li>
-          <li><%= image_tag 'example_img_2.png' %></li>
-          <li><%= image_tag 'example_img_3.png' %></li>
-          <li><%= image_tag 'example_img_1.png' %></li>
-          <li><%= image_tag 'example_img_2.png' %></li>
-        </ul> -->
-      </div>
-
       <div class="images">
+        <div><%= f.label :店舗写真 %></div>
         <%= f.fields_for :images do |i| %>
               <button type="button" class="btn btn-outline-secondary rounded-pill">
-                 <%= i.file_field :image_url , type: 'file',accept: 'image/jpeg,image/gif,image/png'%>
+                 <%= i.file_field :image_url, type: 'file',accept:'image/jpg,image/jpeg,image/gif,image/png'%>
               </button>
         <% end %>
       </div>
+
+      <div class="main">
+        <section class="main__block">
+          <%= form_with model:@shop, local:true do |f| %>
+            <div class="sell__block__form">
+              <div class="sell__block__form__upload">
+                <p>最大5枚までアップロードできます</p>
+
+               <div id="image-box-1">
+                  <div class="item-num-0" id="image-box__container">
+                    <%= f.fields_for :images do |i| %>
+                      <div class="input-area">
+                        <%= i.file_field :image_url, type: 'file', name: "shop[images_attributes][][image_url]", value:"", style: "display:none", id:"img-file",accept:'image/jpg,image/jpeg,image/gif,image/png'%>
+
+                        <label for="img-file">
+                          <i class>
+                            <div class="shop-images">
+                              <ul>
+                                <li><%= image_tag 'example_img_1.png' %></li>
+                                <li><%= image_tag 'example_img_2.png' %></li>
+                                <li><%= image_tag 'example_img_3.png' %></li>
+                                <li><%= image_tag 'example_img_1.png' %></li>
+                                <li><%= image_tag 'example_img_2.png' %></li>
+                              </ul>
+                            </div>
+                          </i>
+                        </label>
+
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </section>
+      </div>
+
+
+
+
+
 
 
 

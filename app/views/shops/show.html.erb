@@ -11,8 +11,7 @@
 <div>
   店舗写真 :
   <% @shop.images.each do |i| %>
-   <%= image_tag i.image_url.url %><!--
-	 <%= image_tag(image,fallback: "no_image.png") %> -->
+   <%= image_tag i.image_url.to_s , width: '10%', height: '10%' %>
   <% end %>
 </div>
 

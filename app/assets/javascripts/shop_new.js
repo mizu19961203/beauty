@@ -39,7 +39,7 @@ $(function(){
       //   $('#image-box__container').before(html);
       // };
       //image-box__containerのクラスを変更し、CSSでドロップボックスの大きさを変えてやる。
-      // $('#image-box__container').attr('class', `item-num-${num}`)
+      $('#image-box__container').attr('class', 'item-num-${num}')
     });
   });
   //削除ボタンをクリックすると発火するイベント
@@ -70,7 +70,7 @@ $(function(){
     //image-box__containerクラスをもつdivタグのクラスを削除のたびに変更
     var num = $('.item-image').length
     $('#image-box__container').show()
-    $('#image-box__container').attr('class', `item-num-${num}`)
+    $('#image-box__container').attr('class', 'item-num-${num}')
   })
 });
 

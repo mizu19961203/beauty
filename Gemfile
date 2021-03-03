@@ -76,7 +76,7 @@ gem 'pry-byebug'
 gem 'bootstrap', '~>4.1.1'
 gem 'jquery-rails'
 gem 'bullet'
-gem 'kaminari','~> 1.1.1'
+gem 'kaminari','~> 1.2.1'
 gem 'carrierwave'
 gem 'fog-aws'
 

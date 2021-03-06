@@ -32,3 +32,7 @@ workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 # process behavior so workers use less memory.
 #
 preload_app!
+
+ on_worker_boot do
+   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
+ end

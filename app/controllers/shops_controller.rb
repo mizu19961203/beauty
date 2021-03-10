@@ -11,8 +11,7 @@ before_action :authenticate_user!,:ensure_correct_user,{only: [:edit, :update]}
     if @shop.save
       redirect_to shops_path , notice: '作成しました'
     else
-      logger.debug @shop.errors.inspect
-      render 'new'
+      render 'index'
     end
   end
 
